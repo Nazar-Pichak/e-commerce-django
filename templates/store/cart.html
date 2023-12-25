@@ -36,10 +36,10 @@
                           <figcaption class="info">
                             <a href="{{ item.product.get_url }}" class="title text-dark">{{ item.product.product_name }}</a>
                             <p class="text-muted small">
-                              {% if item.variations.all  %}
-                                  {% for item in item.variations.all  %}
-                                      {{item.variation_category | capfirst}}: {{item.variation_value | capfirst}} <br> 
-                                  {% endfor %}
+                              {% if item.variations.all %}
+                                {% for item in item.variations.all %}
+                                  {{ item.variation_category|capfirst }}: {{ item.variation_value|capfirst }} <br />
+                                {% endfor %}
                               {% endif %}
                             </p>
                           </figcaption>
@@ -54,10 +54,10 @@
                             </div>
                             <input type="text" class="form-control" value="{{ item.quantity }}" />
                             <div class="input-group-append">
-                              <form action="{% url 'add_cart' item.product.id %}" method="POST" >
+                              <form action="{% url 'add_cart' item.product.id %}" method="POST">
                                 {% csrf_token %}
-                                {% for i in item.variations.all  %}
-                                  <input type="hidden" name="{{i.variation_category | lower}}" value="{{i.variation_value | capfirst}}" >
+                                {% for i in item.variations.all %}
+                                  <input type="hidden" name="{{ i.variation_category|lower }}" value="{{ i.variation_value|capfirst }}" />
                                 {% endfor %}
                                 <button class="btn btn-light" type="submit" id="button-plus"><i class="fa fa-plus"></i></button>
                               </form>
@@ -100,7 +100,7 @@
                   <img src="{% static './images/misc/payments.png' %}" height="26" />
                 </p>
                 <a href="./place-order.html" class="btn btn-primary btn-block">Checkout</a>
-                <a href="{% url "store" %}" class="btn btn-light btn-block">Continue Shopping</a>
+                <a href="{% url 'store' %}" class="btn btn-light btn-block">Continue Shopping</a>
               </div> <!-- card-body.// -->
             </div> <!-- card.// -->
           </aside> <!-- col.// -->
