@@ -4,6 +4,8 @@ from .forms import OrderForm
 from .models import Order, Payment, OrderProduct, Product
 import datetime
 import json
+from django.core.mail.message import EmailMessage
+from django.template.loader import render_to_string
 # Create your views here.
 
 def payments(request):
@@ -56,6 +58,15 @@ def payments(request):
     CartItem.objects.filter(user=request.user).delete()
     
     # Send order recieved email to the customer
+    
+    email_subject = 'Thank you for your order!'
+    message = render_to_string('orders/order_recieved.html', {
+        'user': request.user,
+        'order': order,
+    })
+    to_email = request.user.email
+    send_email = EmailMessage(email_subject, message, to=[to_email])
+    send_email.send()
     
     # Send order number and transaction id back to sendData method via JsonResponse
     
