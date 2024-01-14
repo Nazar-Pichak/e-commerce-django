@@ -75,11 +75,8 @@
 
       <div class="row">
         <div class="col-md-9">
-          <header class="section-heading">
-            <h3>Customer Reviews</h3>
-          </header>
 
-          <form action="" method="POST" >
+          <form action="{% url "submit_review" single_product.id %}" method="POST" >
             {% csrf_token %}
             <h5>Write Your review</h5>
             <div>
@@ -97,6 +94,7 @@
                 <input type="radio" name="rating" id="rating2" value="1" required ><label for="rating2" title="1" ></label>
                 <input type="radio" name="rating" id="rating1" value="0.5" required ><label for="rating1" title="0.5" class="half"></label>
               </div>
+              <br>
               Review Title:
               <input type="text" class="form-control"  name="subject" >
               <br>
@@ -108,6 +106,9 @@
             </div>
           </form>
           <br>
+          <header class="section-heading">
+            <h3>Customer Reviews</h3>
+          </header>
           <article class="box mb-3">
             <div class="icontext w-100">
               <img src="{% static './images/avatars/avatar1.jpg' %}" class="img-xs icon rounded-circle" />
