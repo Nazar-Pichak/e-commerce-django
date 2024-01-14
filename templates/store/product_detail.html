@@ -101,10 +101,16 @@
               Review:
               <textarea name="review" id="" rows="4" class="form-control" ></textarea>
               <br>
-              <input type="submit" name="" id="" value="Submit Review" class="btn btn-primary" >
+              {% if user.is_authenticated %}
+                <input type="submit" name="" id="" value="Submit Review" class="btn btn-primary" >
+              {% else %}
+                <p>You must be logged in to post a review. <span><a href="{% url "login" %}">Login now</a></span></p>
+              {% endif %}
               <br>
             </div>
           </form>
+          <br>
+          {% include "includes/alerts.html" %}
           <br>
           <header class="section-heading">
             <h3>Customer Reviews</h3>
