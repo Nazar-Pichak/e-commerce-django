@@ -99,6 +99,11 @@ def register(request):
                 first_name=first_name, last_name=last_name, email=email, username=username, password=password)
             user.phone_number = phone_number
             user.save()
+            
+            profile = UserProfile()
+            profile.user_id = user.id
+            profile.profile_picture = 'default/default-user.png'
+            profile.save()
 
             current_site = get_current_site(request)
             email_subject = 'Account activation'
