@@ -26,8 +26,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-# ALLOWED_HOSTS = ['django-greatcart-env.eba-jpkhupy5.us-west-2.elasticbeanstalk.com', '172.31.43.32']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['django-greatcart-env.eba-jpkhupy5.us-west-2.elasticbeanstalk.com', '172.31.43.32']
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -90,12 +90,12 @@ WSGI_APPLICATION = 'greatkart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+    # 'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+# }
 
 
 # Password validation
@@ -156,4 +156,4 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 
 
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+# DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
