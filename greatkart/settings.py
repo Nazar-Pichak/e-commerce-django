@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = ["172.31.19.115", "django-greatcart-env.eba-jpkhupy5.us-west-2.elasticbeanstalk.com", "34.215.140.235","*"]
 
 # Application definition
 
