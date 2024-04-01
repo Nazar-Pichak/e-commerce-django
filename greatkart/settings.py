@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ["172.31.19.115", "django-greatcart-env.eba-jpkhupy5.us-west-2.elasticbeanstalk.com", "34.215.140.235","*"]
+ALLOWED_HOSTS = ["172.31.19.115", "django-greatcart-env.eba-jpkhupy5.us-west-2.elasticbeanstalk.com", "34.215.140.235","*", "https://greatcart.online"]
 
 # Application definition
 
@@ -156,7 +156,7 @@ USE_TZ = True
 # STATICFILES_DIRS = [
     # 'greatkart/static',
 # ]
-
+# 
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = BASE_DIR / 'media'
 

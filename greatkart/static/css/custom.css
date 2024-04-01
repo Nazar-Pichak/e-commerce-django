@@ -56,3 +56,10 @@ ul.thumb li img {
    height: 80px;
    border: 1px solid grey; 
 }
+
+/* @media (max-width: 1200px) { */
+    /* tablet devices */
+    /* .brand-wrap .logo, .navbar-brand .logo { */
+      /* display: none; */
+    /* } */
+/* } */
