@@ -96,6 +96,8 @@
   .navbar-expand .navbar-collapse {
     flex-direction: column;
   }
+
+  
 }
 
 
@@ -114,6 +116,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  .col-md-8.text-md-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-shrink: initial;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .px-2.number {
+    display: none;
+  }
+  
+}
 
 
  /* sourceMappingURL=responsive.css.map  */
