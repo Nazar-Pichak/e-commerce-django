@@ -133,5 +133,15 @@
   
 }
 
+@media screen and (max-width: 485px) {
+  .table-shopping-cart.table td {
+    display: flex;
+  }
+
+  .table th {
+    display: flex;
+  }
+  
+}
 
  /* sourceMappingURL=responsive.css.map  */
