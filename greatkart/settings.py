@@ -153,9 +153,9 @@ USE_TZ = True
 
 # STATIC_URL = '/static/'
 # STATIC_ROOT = BASE_DIR / 'static'
-# STATICFILES_DIRS = [
-    # 'greatkart/static',
-# ]
+STATICFILES_DIRS = [
+    'greatkart/static',
+]
 
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = BASE_DIR / 'media'
@@ -180,9 +180,9 @@ DEFAULT_FILE_STORAGE = 'greatkart.media_storage.MediaStorage'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
-
-
-
+ 
+ 
+ 
 from django.contrib.messages import constants as messages
 
 MESSAGE_TAGS = {

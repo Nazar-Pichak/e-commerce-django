@@ -141,7 +141,27 @@
   .table th {
     display: flex;
   }
+
+  thead.text-muted, thead, .my-order.date {
+    display: none;
+  }
+
+  .text-center-q, .text-center-p {
+    display: none;
+  }
   
+}
+
+@media screen and (max-width: 410px ) {
+    .my-order.total {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 345px ) {
+   .my-order.phone {
+    display: none;
+   }
 }
 
  /* sourceMappingURL=responsive.css.map  */
