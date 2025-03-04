@@ -2,7 +2,7 @@ databases:
   - name: greatkartdb
     plan: free
     databaseName: greatkart
-    user: Nazar
+    user: greatkart
 
 services:
   - type: web
