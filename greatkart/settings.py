@@ -92,9 +92,6 @@ WSGI_APPLICATION = 'greatkart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-import os
-import dj_database_url
-from decouple import config
 
 DEBUG = config('DEBUG', default=True, cast=bool)
 
