@@ -7,7 +7,7 @@ databases:
 services:
   - type: web
     plan: free
-    name: mysite
+    name: greatkart
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "python -m gunicorn greatkart.asgi:application -k uvicorn.workers.UvicornWorker"
