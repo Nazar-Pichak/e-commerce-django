@@ -1,13 +1,13 @@
 databases:
-  - name: greatkartdb
+  - name: greatcartdb
     plan: free
-    databaseName: greatkart
-    user: greatkart
+    databaseName: greatcart
+    user: greatcart
 
 services:
   - type: web
     plan: free
-    name: greatkart
+    name: greatcart
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "python -m gunicorn greatkart.asgi:application -k uvicorn.workers.UvicornWorker"
