@@ -86,7 +86,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'greatkart.wsgi.application'
+# WSGI_APPLICATION = 'greatkart.wsgi.application'
+ASGI_APPLICATION = "greatkart.asgi.application"
 
 
 # Database
