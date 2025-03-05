@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'greatkart.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 if DEBUG:
     DATABASES = {
