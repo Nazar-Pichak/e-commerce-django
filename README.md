@@ -1,4 +1,5 @@
 # Project Description
 
-The longes and the biggest project written by me by following course on the Udemy platform.
+The project is not completed yet. To be continued....
+
 
