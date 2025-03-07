@@ -28,7 +28,6 @@
             <!-- form-group// -->
 
             <div class="form-group">
-              <a href="{% url "forgot_password" %}" class="float-right">Forgot password?</a>
             </div>
             <!-- form-group form-check .// -->
             <div class="form-group">
@@ -38,13 +37,10 @@
           </form>
         </div>
         <!-- card-body.// -->
+        <p class="text-center mb-4">Don't have account?<a href="{% url 'register' %}"> Sign up</a></p>
+        <p class="text-center mb-4">Forgot password?<a href="{% url "forgot_password" %}"> Reset here</a></p>
       </div>
       <!-- card .// -->
-
-      <p class="text-center mt-4">
-        Don't have account? <a href="{% url 'register' %}">Sign up</a>
-      </p>
-      <br /><br />
     {% endif %}
   </div>
   </section>
