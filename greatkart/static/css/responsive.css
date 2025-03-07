@@ -7,6 +7,11 @@
   .brand-wrap .logo, .navbar-brand .logo {
     display: none;
   }
+  
+  .header-search {
+    display: flex;
+    justify-content: space-between !important;
+  }
 
 }
 @media (max-width: 992px) {
@@ -97,6 +102,17 @@
     flex-direction: column;
   }
 
+  .col-md-8.text-md-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-shrink: initial;
+    justify-content: center;
+  }
+
+  .mobile-footer {
+    flex-direction: column;
+  }
   
 }
 
@@ -113,16 +129,6 @@
   .col-8 {
     flex: auto;
     max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .col-md-8.text-md-center {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    flex-shrink: initial;
-    justify-content: center;
   }
 }
 
