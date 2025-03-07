@@ -19,9 +19,9 @@
 <script src="{% static "js/bootstrap.bundle.min.js" %}" type="text/javascript"></script>
 <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css"/>
 
-<!-- Font roboto -->
+<!-- Font roboto and font-awesome -->
 <link href="{% static "fonts/roboto/font-min.css" %}" type="text/css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="{% static "font-awesome/css/font-awesome.min.css" %}" type="text/css" rel="stylesheet">
 
 <!-- custom style -->
 <link href="{% static "css/ui.css" %}" rel="stylesheet" type="text/css"/>
@@ -32,14 +32,10 @@
 <script src="{% static "js/script.js" %}" type="text/javascript"></script>
 
 <script type="text/javascript">
-/// some script
 
 // jquery ready start
-$(document).ready(function() {
-	// jQuery code
+$(document).ready(function() {}); 
 
-}); 
-// jquery end
 </script>
 
 {% comment %} <script src="https://www.paypal.com/sdk/js?client-id=CLIENT_ID&currency=USD"></script> {% endcomment %}
@@ -48,7 +44,7 @@ $(document).ready(function() {
     
 
 </head>
-<body>
+<body class="d-flex flex-column justify-content-between">
 
 {% include "includes/navbar.html" %}
 
